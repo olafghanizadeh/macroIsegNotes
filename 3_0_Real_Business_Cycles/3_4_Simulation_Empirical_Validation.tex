@@ -1,0 +1,284 @@
+\section{A prototype model: simulation and empirical validation}
+
+
+\subsection{Uncertainty}
+
+\begin{equation*}
+\begin{aligned}
+    \underset{C_t, L_t}{\text{max}}   E_t \Bigg\{ \sum^{\infty}_{t = \tau} \left( 1 + \rho \right)^{- (t - \tau} \cdot \left[  \frac{C_t^{1 - \theta} -1}{1 - \theta} + b \frac{(1 - L_t)^{1 - \chi} - 1}{1 - \chi} \right] \Bigg\} \\
+   \text{subject to} && W_tL_t + R_tK_t - C_t - \delta K_t - T_t
+\end{aligned}
+\end{equation*}
+
+Instead of maximizing utility as we did in the cases with perfect information, we now have to maximize Expected Utility $E_t$.
+
+
+
+We need to set up a Current Value Hamiltonian (CVH), which will be:
+
+$$
+H_t = E_t \Bigg\{ \sum^{\infty}_{t = \tau} \left( 1 + \rho \right)^{- (t - \tau} \cdot \left[  \frac{C_t^{1 - \theta} -1}{1 - \theta} + b \frac{(1 - L_t)^{1 - \chi} - 1}{1 - \chi} \right] \Bigg\} + \lambda_t \left( W_tL_t + R_tK_t - C_t - \delta K_t - T_t \right)
+$$
+
+Deriving the first order conditions to solve this problem:
+
+\begin{enumerate}[(1)]
+    \item $$\frac{\partial H}{\partial C_t} \equiv \frac{\partial H}{\partial C_t} E_t \frac{C_t^{1 - \theta} - 1}{1 - \theta} - \frac{\partial H}{\partial C_t} E_t \lambda_t C_t = 0 \implies E_t C_t^{- \theta} = E_t \lambda_t $$
+    
+    \item $$\frac{\partial H}{\partial L_t} -b \left( 1 - L_t \right)^{ - \chi} + \lambda_t W_t = 0$$
+    
+        \item $$\frac{\partial H}{\partial K_t} E_t \lambda_t \cdot ( R_t - \delta ) = - E_t (\lambda_t - \lambda_{t - 1}) + \rho \lambda_{t - 1} $$
+
+\end{enumerate}
+
+
+$$
+E_t \lambda_{t+1} \cdot \mathcal{R}_{t+1} = - E_t \lambda_{t+1} + (1 + \rho) \lambda_t
+$$
+
+$$
+E_t (1 + \mathcal{R}_{t+1}) \lambda_{t +1} = ( 1 + \rho) \lambda_{t}
+$$
+
+
+$$
+E_t \lambda_{t +1}^{- \theta} \cdot (1 + \mathcal{R}_{t +1}) = (1 + \rho ) \cdot C_t^{- \theta}
+$$
+
+
+$$
+C_t^{- \theta} = \frac{1}{1 + \rho} \cdot E_t C_{t + 1}^{- \theta} \cdot (1 + \mathcal{R}_{t +1})
+$$
+Required assumption: Probability Distribution is stable. Why?
+Correct??
+
+
+
+\subsection{An exact solution to an approximate problem}
+\paragraph{Log-Linerization of the model}
+$$
+X_{t+1} = f (X_t) \cdot e^{u_t}
+$$
+
+$$
+\ln X_{t+1} = \ln f(X_t) + U_t
+$$
+
+$$
+\ell_{t+1}
+$$
+
+$$
+\Tilde{X}_{t} = \frac{X_t - X^*}{X^*} \implies \frac{X_t}{X^*} = 1 + \Tilde{X}_{t}
+$$
+
+$$
+\ln \left( \frac{X_t}{X^*} \right) =  \Tilde{X}_{t}
+$$
+
+$$
+\Tilde{X}_{t} = \ln X_t - \ln X^*
+$$
+
+$$
+\frac{dX_t}{X^*} = d\ln X_t = \frac{(X_t^* dX_{t}) - X^*}{X^*}
+$$
+
+$$
+\frac{dX_t}{X^*} \approx  \ln \left( \frac{X_t}{X^*} \right)
+$$
+
+$$
+(8) \Tilde{A} = 
+$$
+
+Consumption Euler Equation on log-linear form:
+$$
+- \theta C^{* - \theta} \cdot \frac{\partial C_t}{C^*} = \frac{1}{1 + \rho} \left[ (1 + R)^* \cdot (- \theta) C^{* - \theta} \cdot \frac{d E_t C_{t+1}}{C^*} + C^{* - \theta} \cdot d E_t R_{t+1}   \right]
+$$
+
+Where $\frac{\partial C_t}{C^*}$ is $\Tilde{C}_t$ and $\frac{d E_t C_{t+1}}{C^*}$ is $E_t\Tilde{C}_{t+1}$
+
+By cancelling terms and substituting our new variables we get:
+
+\begin{equation}
+- \theta \Tilde{C}_t = \frac{1}{1 + \rho} \left[ (1 + R)^* \cdot (- \theta) C^{* - \theta} \cdot E_t\Tilde{C}_{t+1} + R^*  \frac{d E_t R_{t+1}}{R^*}   \right]
+\end{equation}
+
+$R^* = \rho$
+
+In this equation $\frac{d E_t R_{t+1}}{R^*}$ can be written as $E_t \Tilde{R}_{t+1}$
+
+\begin{equation}\tag{$\Tilde{1}$}
+    E_t\Tilde{C}_{t+1} - \Tilde{C}_t = e_1 E_t \Tilde{R}_{t + 1}
+    \end{equation}
+    
+    $$
+    e_1 = \frac{\rho}{\theta (1 + \rho )} > 0
+    $$
+
+
+\begin{equation}\tag{(3)}
+W_t = (1 - \alpha) A_t^{1 - \alpha} \cdot \left( \frac{K_t}{L_t}  \right)^{\alpha} 
+\end{equation}
+
+\begin{equation}\tag{$\Tilde{3}$}
+\Tilde{W}_t = (1 - \alpha) \Tilde{A}_t + \left( \Tilde{K_t} - \Tilde{L_t}  \right)
+\end{equation}
+
+\begin{equation}\tag{$\Tilde{6}$}
+    \Tilde{Y}_t = \alpha \Tilde{K}_t + (1 - \alpha)(\Tilde{A}_t + \Tilde{L}_t)
+\end{equation}
+
+\begin{equation}
+    Z_t = \left( \frac{W_t}{b} \right)^{ - \frac{1}{\chi}} \cdot C_t^{\frac{\theta}{\chi}}
+\end{equation}
+
+\begin{equation}
+    Z_t 1  - L_t
+\end{equation}
+
+\begin{equation}
+    \Tilde{Z}_t = - \frac{1}{\chi}\Tilde{W}_t + \frac{\theta}{\chi} \cdot \Tilde{C}_t
+\end{equation}
+
+\begin{equation}\tag{$\Tilde{2}$}
+    \Tilde{L}_t = e_2 \Tilde{W}_t - e_3 \Tilde{C}_t
+\end{equation}
+
+$$
+e_2 = \frac{1 - L^*}{L^*} \cdot \frac{1}{\chi} > 0
+$$
+
+$$
+e_3 = \theta e_2 > 0
+$$
+
+\begin{equation}\tag{$\Tilde{4}$}
+    \Tilde{R}_t = e_4 \left( \Tilde{A}_t + \Tilde{L}_t - \Tilde{K}_t  \right)
+\end{equation}
+
+$$
+e_4 = \frac{\rho - \delta}{\rho}(1- \alpha) > 0
+$$
+
+\begin{equation}\tag{$\Tilde{5}$}
+    \Tilde{K}_{t+1} = (1 - \delta) \Tilde{K}_t 0 e_5 \Tilde{Y}_t - e_6 \Tilde{C}_t - e_7 \Tilde{G_t}
+\end{equation}
+
+$$
+e_5 = \frac{Y^*}{K^*}> 0
+$$
+Average product of capital, which is positive at the steady state.
+
+
+$$
+e_6 = e_5 \cdot \frac{C^*}{Y^*} > 0
+$$
+
+The ratio of consumption to output, or consumption divided by capital.
+
+
+$$
+e_7 = e_5 \cdot \frac{G^*_t}{Y^*} > 0
+$$
+
+\subsubsection*{Solving the dynamic model}
+
+
+$$
+E_t \Tilde{K}_{t +1} = \Tilde{K}_{t + 1}
+$$
+
+$$
+E_t \Tilde{A}_{t + 1}= 
+$$
+\begin{equation}\label{matrix_solution}
+\begingroup % keep the change local
+\renewcommand*{\arraystretch}{2}
+\begin{bmatrix}
+E_t \Tilde{C}_{t +1} \\
+\Tilde{K}_{t +1} 
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_{1,1} & a_{1,2} \\
+a_{2,1} & a_{2,2} 
+\end{bmatrix}
+\begin{bmatrix}
+\Tilde{C}_t \\
+\Tilde{K}_{t} 
+\end{bmatrix}
++
+\begin{bmatrix}
+b_{1,1} & b_{1,2} \\
+b_{2,1} & b_{2,2} 
+\end{bmatrix}
+\begin{bmatrix}
+\Tilde{A}_t \\
+\Tilde{G}_{t} 
+\end{bmatrix}
+\endgroup
+\end{equation}
+
+
+Fill in eigenvalues Candidate Solution
+
+
+Laws of motion
+
+
+$$
+\tilde { c } _ { t } = a _ { CK} \cdot \tilde { k } _ { t } + a_ { CA } \cdot \tilde { A } _ { t } + a _ { CG } \cdot \tilde { G } _ { t }
+$$
+
+$$
+\Tilde{K}_{t + 1} = b_{KK} \cdot \Tilde{K}_t + b_{KA} \cdot \Tilde{A}_t + b_{KG} \cdot \Tilde{G}_t
+$$
+
+From \ref{matrix_solution} we have:
+
+$$
+E_t \Tilde{C}_{t +1} = a_{CK} \cdot \Tilde{K}_{t + 1} + a_{CA} \cdot E_t \Tilde{A}_{t + 1} + a_{CG} \cdot E_t \Tilde{G}_{t + 1}
+$$
+
+
+$$
+b _ { K G  } = a _ { 21 } \cdot a _ { CG } + b _ { 22 }
+$$
+
+$$
+b _ { KA } = a _ { 2 1 } \cdot a _ { C A } + b _ { 21 }
+$$
+
+
+$$
+b _ { KK } = a _ { 21 } a _ { CK } + a _ { 22 }
+$$
+
+
+
+
+\subsection{Empirical Validation}
+
+\subsubsection{Calibration}
+
+\subsection{Comparing the RBC model with data}
+
+\paragraph{Pros}
+\begin{enumerate}[(a)]
+    \item Consumption is less volatile than output
+    \item Investment is volatile than output ???
+    \item Capital stock is much less volatile than output
+    \item Real wages and the average product of labour are procyclical, as expected
+    \item Employment is procyclical
+    \item Time series created by the model is similar to data
+\end{enumerate}
+
+\paragraph{Cons}
+\begin{enumerate}[(a)]
+    \item Average product of labour is more procyclical than what is shown by data
+    \item A positive correlation between employment and APL, but in reality the correlation is negative. 
+    \item 
+
+\end{enumerate}

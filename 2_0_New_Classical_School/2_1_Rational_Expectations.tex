@@ -1,0 +1,430 @@
+
+\section{Adaptive and Rational Expectations}
+\textbf{Adaptive Expectations:}
+\begin{equation*}
+    \textbf{AE:} \ X^{e}_{t+1} = f(X_{t}, X_{t+1}, X_{t+2} \dots X_{t+n})
+\end{equation*}
+
+Adaptive Expectations are based on backwards looking data to formulate expectations. 
+\\
+
+\textbf{Rational Expectations:}
+\begin{equation*}
+    \textbf{RE:} \ X^{e}_{t+1} = E(X_{t+1}\mid \Omega_t )
+\end{equation*}
+
+Where $\Omega$ is the information set which includes some model of the economy built on the best information available. 
+
+Adaptive expectations are backwards looking, while rational expectations are forward looking.
+
+\section{The Lucas Supply Function and Imperfect Information}
+\textbf{The Archipelago economy:}
+Each island has a household $i$ and it produces a good $i$ with labour as the only input. Each island is specialized and produces a different good. This good is sold on the weekly marketplace and therefore production decisions needs to be made ahead of time. Every island only has partial information regarding the production of other islands. Everybody is ill informed, but all islands are equally ill-informed.  \\
+
+A simple linear production function with labour as the only input:
+\begin{equation*}
+    Y_i = 1 \cdot L_i
+\end{equation*}
+
+Utility maximization problem: 
+\begin{equation*}
+\begin{aligned}
+& \underset{C, L}{\max}
+& & U_i = C_i - \frac{L_{i}^{\gamma}}{\gamma} \\
+& \text{s.t}
+& & \sum^{n}_{j = i} c_i p_j = p_i * y_i
+\end{aligned}
+\end{equation*}
+The utility function is linear on consumption, but non-linear on labour, because we have $\gamma > 1$ and disutility of labour. 
+
+
+The consumption basket for household $i$ is:
+\begin{equation}
+    C_i = C_i \left( c_1^{i}, c_2^{i} ...., c_n^{i}  \right)
+\end{equation}
+The consumption basket is a homothetic function 
+
+
+$$
+\sum_{j = 1 }^{n} c_j^{i} \cdot p_j = P^{i} C_i
+$$
+
+Where $P_i$ is  the price index for the respective household, which is a function written as: 
+$$
+P^{i} = P^{i} (p_1, p_2, ...., p_n)
+$$
+
+The maximization problem is then to maximize production to maximize the expected utility given the information set:
+\begin{equation*}
+\begin{aligned}
+& \underset{Y_j}{\max}
+& & E \left[ \frac{p_i}{P} y_j - \frac{y^{\gamma}}{\gamma} \bigg\rvert \Omega \right] = E_i U_i
+\end{aligned}
+\end{equation*}
+
+Where $P$ is the aggregate price index. 
+
+Jensens inequality: 
+$$
+E_iY_i^\gamma > (E_iY_i)^\gamma
+$$
+
+
+$$
+E_i \left( \frac{P_i}{P} Y_i  \right) = E \left( \frac{p_i}{P}  \right) \cdot E(Y_i) + \text{cov}\left( \frac{p_i}{p} \right)
+$$
+
+\begin{equation*}
+\begin{aligned}
+& \underset{Y_i}{\max}
+& & \frac{p_i}{P} y_i - \frac{Y_i^{\gamma}}{\gamma}
+\end{aligned}
+\end{equation*}
+
+FOC:
+$$
+\frac{\partial U_i}{\partial Y_i} = \frac{p_i}{P} - Y^{\gamma - 1} = 0 \implies Y^S_i = \left( \frac{p_i}{P^e} \right)^\frac{1}{\gamma - 1 }
+$$
+
+Where $Y_i^S$ is the supply of good $i$
+
+This is the Lucas supply function in levels.
+
+
+
+\paragraph{Lucas Supply Function in logs}
+
+Lower case denotes variables in log-form.
+
+$$y _ { i } ^ { s } =  \frac{1}{ 1 - \gamma} \left( p _ { i } - p ^ { e }  \right)     $$
+
+The smaller the $\gamma$, the bigger the effect the effect of the relative price the supply decision.
+
+\paragraph{Lucas Demand Function in logs}
+\begin{align*}
+    y_i^d = y \cdot Z_i \left( \frac{p_i}{p}  \right)^{- \eta} && \text{Where} \ \eta > 0
+\end{align*}
+$\eta > 0$ is an elasticity 
+
+$$
+z_i = \ln Z_i \sim N(0, V_z)
+$$
+
+The log of $Z_i$ follows a normal distribution with mean 0 and a finite variance $V_Z)$. Which is an idiosyncratic shock that only affects a specific island.  
+
+$$
+y^d_i = y + z_i - \eta (p_i - p)
+$$
+
+No expectations, because the demand does not depend on that. Demand is formed when prices are observed at the market. 
+
+
+The aggregate demand function is given by this very simple equation:
+The quantity of money times the velocity, equals the nominal output:
+$$
+M - V = P \cdot Y
+$$
+
+We are assuming that $V = 1$ to simplify, and we have no government and only a central bank that issues money. 
+
+If we write as logs we get:
+
+\begin{equation}\label{lucas_agg_demand}
+    y^d = m - p
+\end{equation}
+
+
+\subsubsection{Solution with perfect information}
+
+\begin{align*}
+    y^s_i = y^d_i \implies \\
+    &&& \frac{1}{\gamma - 1} (p_i - P) = y + z_i - \eta (p_i - P)
+\end{align*}
+
+Solve the equation for $p_i$ to get:
+
+$$
+p_i = \frac{\gamma - 1}{1 + \eta (\gamma -1)} (y + z_i) + p
+$$
+
+All islands are the same, so the above is true for island $i$, but also for the average. In this case, $z$ becomes 0 because different positive and negative shocks cancel each-other out. 
+
+\begin{equation*}
+    p = \frac{\gamma - 1}{1 + \eta (\gamma -1)}y + p \implies \emptyset \implies Y
+\end{equation*}
+
+Since we are looking at logs, $\emptyset$ does not mean that we are producing no units, but that the economy is at its potential output. We can define $\emptyset = Y^N$ for natural output.
+
+If output is equal to $\emptyset$ the price level will be $M$. If there is a change in money supply prices would go up as much as the increase in money supply, thus if the monetary policy is anticipated there are no real effects on output of changes in monetary policy. 
+
+\paragraph{Solution with imperfect information}
+
+$$
+y_i = \frac{1}{\gamma - 1} (p_i - p^e)
+$$
+
+Where $(p_i - p^e) = E_i r_i$, $r_i$ is the relative price, the expected value of the relative price given the information set:
+$$
+E_i r_i = E \left( p_i - P \bigg\rvert \Omega  \right)
+$$
+
+\paragraph{Idiosyncratic shocks}
+Idiosyncratic shocks is the only thing that can affect the expectations of relative prices. From before we have the individual idiosyncratic shocks given by $z_i$
+$$
+z_i \approx N(0, V_z)
+$$
+
+
+\paragraph{Aggregate shocks}
+We assume that aggregate shocks are only monetary shocks:
+
+$$
+m \approx (E(m), V_m)
+$$
+
+$$
+p_i = p + r_i = p + (p_i - p)
+$$
+
+
+Extracting noise:
+$$
+E_i r_i = \alpha + \beta p_i
+$$
+
+
+$$
+\alpha = - \frac{V_{r}}{V_{r} + V_p} E(p)
+$$
+
+
+$$
+\beta = \frac{V_{r}}{V_{r} + V_p}
+$$
+
+The variances of relative and aggregate prices. 
+
+
+Since $\beta = -\alpha \cdot E(p)$ we can rewrite into:
+
+$$
+E_i r_i = \beta \left[  p_i - E(p)  \right]
+$$
+
+We can substitute this into the Lucas Supply Function:
+
+$$
+y_i = \frac{1}{\gamma - 1} \cdot \beta \left[  p_i - E(p)  \right] = b \left[  p_i - E(p)  \right]
+$$
+
+Where $b = \tfrac{\beta}{\gamma - 1}$
+\subsection*{Lucas Aggregate Supply Function}
+
+Aggregate supply:
+\begin{equation*}
+   y^s = b [ p - E ( p ) ] 
+\end{equation*}
+
+Recall the Lucas Aggregate Demand function in equation \ref{lucas_agg_demand} to find the equilibrium:
+
+$$
+y^d = y^s \implies
+m - p = b [ p - E( p ) ]
+$$
+
+Solving for $p$ gives: 
+$$
+p = \frac{1}{1+b}m + \frac{b}{1 + b}E(p)
+$$
+
+Thus we see that the actual aggregate price level depends on the money supply and the expectations of price. 
+
+\begin{tcolorbox}
+The expected value of the expected value is the expected value!
+\end{tcolorbox}
+
+The best expectation of $p$:
+$$
+E(p) = E(m)
+$$
+
+$$
+m = E(m) + \left[  m - E(m) \right] 
+$$
+
+$$
+p = \frac{1}{1 +b} \left[ E(m) + [m - E(m)] \right] + \frac{b}{1 + b} E(m) \implies E(m) + \frac{1}{1 + b} \left[ m - E(m) \right]
+$$
+
+
+Substituting into the Lucas Supply Function gives:
+$$
+y = b \Bigg\{ E(m) + \frac{1}{1 + b} [m - E(m)] - E(m) \Bigg\}
+$$
+
+Which simplifies into:
+
+\begin{align}
+        y = \alpha [m - E(m)] && \alpha = \frac{b}{1 + b}
+\end{align}
+
+
+
+\clearpage
+
+\section{Economic policy effectiveness and the Lucas critique}
+
+
+\subsection{Neutrality of Anticipated policy}
+
+If Monetary policy is anticipated there will be no effect on output or real wages --- the only effect will be on prices. For fiscal policy, the result will be the same. Thus, only \textit{unanticipated} policy changes can have real effects. 
+
+Let us look at how to effectiveness of policy can be independent of the above conclusion. If you introduce rational expectations into a Keynesian model, the results become even more "Keynesian". Rational expectations are not enough to only have surprise effects.
+
+$$
+\frac { \partial \alpha_0 } { \partial b } = \frac { \alpha } { 1 + b } > 0
+$$
+
+The bigger the $b$, the $\alpha$ is the effect of the surprise component of monetary policy on output.
+
+$$
+b = \frac { 1 } { \gamma - 1 } \beta = \frac{1}{\gamma - 1} \frac { V_R } { V _ { R } + V _ { p } }
+$$
+
+
+\begin{align}
+     p = E ( m ) + \frac { 1 } { 1 + b } \left[  m - E ( m ) \right] &&
+    V_p = V \left( \frac{m}{1 + b} \right) = \frac{V_m}{(1+b)^2}
+  \end{align}
+  
+
+$$
+y _ { i } = y + z _ { i } - \eta\left( p _ { i } - p \right)
+$$
+
+Substituting the Lucas Supply function for $y$ yields:
+
+$$
+y _ { i } = b [ p - E( p ) ] + z _ { i } - \eta\left( p _ { i } - p \right) \implies b [ p - E( p ) ] - \eta (p_i - p) + Z_i $$
+
+$$
+\frac{p_i - p}{r_i} = \frac{Z_i}{b + \eta} \implies V_R = \frac{V_Z}{(b + \eta)^2}
+$$
+
+
+
+
+$$
+b = \frac{1}{r - 1} \cdot \beta = \frac{1}{\gamma - 1} \cdot \frac{V_R}{V_R + V_p}= \frac{1}{\gamma - 1} \cdot \frac{1}{1 + f(b) \cdot \frac{V_m}{V_Z}}
+$$
+
+Where $\tfrac{V_m}{V_z} = R_V$
+
+\begin{align*}
+  f ( b ) = \left( \frac { \eta + b } { 1 + b } \right) ^ { 2 }  
+\end{align*}
+
+Where $$ \frac { d b } { d R _ { V } } < 0$$, for $\eta \leq 9$ is the relative variance between aggregate and idiosyncratic shocks. The bigger the relative variance, the smaller $b$ will be and thus the impact of surprise policy on output will be smaller. 
+
+The more often aggregate shocks happen, the less effect surprise policy has on the aggregate output. The more often we have idiosyncratic shocks relative to aggregate shocks, the more effective surprise policy will be. 
+
+\subsection{The Lucas Critique}
+
+\[ 
+\left\{
+\begin{array}{l l}
+    y^S=b(p-p^e) \\
+    y^d=\theta(m-p)+u
+\end{array}
+\right.
+\]
+
+
+\begin{align*}
+    y=b \bigg( \frac{\theta}{b+\theta}m+\frac{b}{b+\theta}p^e+\frac{u}{b+\theta}-p^e \bigg) \\
+    y=-\frac{b\theta}{b+\theta}p^e+\frac{b\theta}{b+\theta}m + \frac{b}{b+\theta}u
+\end{align*}
+
+Where $p^e=E(p)$. 
+
+To understand the Lucas critique take the solutions of the model under to regimes of expectations. 
+
+\subsubsection{Static Expectations}
+
+Under static expectations, agents expect for any period, that the price will be equal, or at least related, to the one of the previous period, hence: 
+
+\begin{equation*}
+    p_t^e=p_{t-1}
+\end{equation*}
+
+So, one would estimate the mode in it's reduced form: 
+
+\begin{equation*}
+    y_t=a_0+a_1m_t+a_2p_{t-1}+v_t
+\end{equation*}
+
+With the parameters $a_i$ representing the parameters of the extensive form, 
+
+\begin{align*}
+    \Tilde{a}_{0}=0 && \Tilde{a}_{1}=\frac{b\theta}{b+\theta} && \Tilde{a}_2=-\frac{b\theta}{b+\theta}
+\end{align*}
+
+\subsubsection{Rational Expectations}
+
+\begin{equation*}
+    p^e=E(p)
+\end{equation*}
+
+Suppose there's a policy rule, $m=\overline{m}-\delta(y-y^n)$ (with $y^n=0$). 
+
+\begin{equation*}
+    E(p)=\frac{\theta}{b+\theta}E(m) + \frac{b}{b+\theta}E(p)+\frac{1}{b+\theta}E(u) \implies E(p)=E(m)
+\end{equation*}
+
+\begin{equation*}
+    E(m)=E[(\overline{m})-\delta y]=\overline{m}-\delta E(y)
+\end{equation*}
+
+\begin{equation*}
+    E(y)=\frac{b\theta}{b+\theta}\bigg[E(m)-E(p) \bigg]=0
+\end{equation*}
+
+\begin{equation*}
+    y=-\frac{b\theta}{b+\theta}\overline{m}+\frac{b\theta}{b+\theta}m+\frac{b}{b+\theta}u
+\end{equation*}
+
+By estimation, one would get the parameters: 
+
+\begin{align*}
+    \hat{a}_0=-\frac{b\theta}{b+\theta}\overline{m} && \hat{a}_1=\frac{b\theta}{b+\theta} &&\hat{a}_2=0
+\end{align*}
+
+The problem relies on the fact that under rational expectations, the parameter $\hat{a}_0$ depends on the level $\overline{m}$, and this makes estimation biased and unreliable. 
+
+In terms of econometrics, Lucas suggests the following: 
+
+\begin{itemize}
+    \item Using simultaneous equations models of reduced forms;
+    \item Estimating parameters through microeconometrics, because it's more reliable. One should, however, consider the limitations of microeconometrics in estimating macro variables. 
+\end{itemize}
+
+The Lucas Critique is, in essence, a critique on policymakers. Lucas says expectations are likely to be important to many relationships among aggregate variables, and changes in policy are likely to affect those expectations. 
+
+If all policymakers attempt to take advantage of statistical relationships, effects operating through expectations may cause relationships to break down. 
+
+
+\section{Economic Policy effectiveness}
+
+\paragraph{The Conservatice Central banker}
+
+$$
+\epsilon_{\text{GCB}} > \epsilon
+$$
+
+$$
+\frac{\partial \Pi_m}{\partial \epsilon} - \frac{b}{\epsilon^2}y^* < 0
+$$
+
+
+
+

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=1.5,font=\footnotesize]
+\tikzset{
+% Two node styles for game trees: solid and hollow
+solid node/.style={circle,draw,inner sep=1.5,fill=black},
+hollow node/.style={circle,draw,inner sep=1.5}
+}
+% Specify spacing for each level of the tree
+\tikzstyle{level 1}=[level distance=15mm,sibling distance=25mm]
+\tikzstyle{level 2}=[level distance=15mm,sibling distance=15mm]
+% The Tree
+\node(0)[solid node,label=above:{$p_0^*$}]{}
+
+%child[grow=right,level distance=30mm]{node[hollow node,label=right:{$(1,3)$}]{}
+%edge from parent node[above]{$R$}
+%}
+child{node(1)[solid node, label=left:{Change price to $p_1^*$}]{}
+child{node[hollow node,label=below:{ Keep $p_1^*$}]{} edge from parent node[left]{$(1-\varphi)\varphi$}}
+child{node[hollow node,label=below:{Change price to $p_2^*$}]{} edge from parent node[right]{$(1-\varphi)\varphi+\varphi^2$}}
+edge from parent node[left,xshift=-3]{$\varphi$} %First level
+}
+child{node(2)[solid node, label=right:{Keep $p_0^*$}]{}
+child{node[hollow node]{} }
+child{node[hollow node,label=below:{Keep $p_0^*$}]{} edge from parent node[right]{$(1 - \varphi)^2$}}
+edge from parent node[right,xshift=3]{$1 - \varphi$} %first level
+};
+% specify mover at 2nd information set
+\node at ($(1)!1.9!(2)$) {$\mathbf{t_1}$};
+\end{tikzpicture}

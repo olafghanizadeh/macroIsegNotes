@@ -1,0 +1,82 @@
+\subsection{The AK Model}
+
+\subsubsection{Some Simplifications}
+\begin{itemize}
+    \item $\delta=0$
+    \item $F(\cdot)$ is Cobb-Douglas
+\end{itemize}
+
+\begin{equation*}
+    A=a^{\frac{1}{1-\alpha}}\frac{K}{L}
+\end{equation*}
+
+\subsubsection{"Solow" Version}
+
+
+$a>0$, and so, it's implied that more capital will increase technical progress. 
+
+We assume that $n=0$, so population is stable. 
+
+\begin{equation*}
+    Y=K^\alpha(AL_{0})^{1-\alpha}=K^\alpha\bigg(a^{\frac{1}{1-\alpha}}\bigg)^{1-\alpha}=aK^{\alpha+1-\alpha}=aK
+\end{equation*}
+
+\begin{equation*}
+    S=sY=s\cdot a \cdot K
+\end{equation*}
+
+\begin{equation*}
+    \Dot{K}=S=Y-C=s \cdot a \cdot K
+\end{equation*}
+
+\begin{equation*}
+    g_{k}=\frac{\Dot{K}}{K}=sa
+\end{equation*}
+
+\subsubsection{"Ramsey" Version}
+
+\begin{align*}
+    \frac { \dot{C}} { C } = \frac { R - \rho } { \theta }=\frac{\alpha \cdot a - \rho}{\theta} && 
+    g_{C}=\frac{\dot{C}}{C}=\frac{\alpha \cdot a -\rho}{\theta}=\overline{g}_{C}
+\end{align*}
+
+\begin{equation*}
+    R=MPK=\alpha K^{\alpha-1}(AL_{0})^{1-\alpha}=\alpha\bigg(\frac{AL_{0}}{K} \bigg)^{1-\alpha}=\alpha \bigg(\frac{a^{\frac{1}{1-\alpha}}\frac{K_{0}}{L_{0}}L_{0}}{K_{0}} \bigg)^{1-\alpha}=\alpha \cdot a
+\end{equation*}
+
+Define consumption as: 
+\begin{equation*}
+    C(t)=C_{0}e^{\overline{g}_{C}t}
+\end{equation*}
+
+\begin{equation*}
+    \dot{K}=Y-C=aK-C(t)
+\end{equation*}
+
+\begin{equation*}
+    K(t)=\frac{C_{0}\cdot e^{\overline{g}_{C}\cdot t}}{a-\overline{g}_{C}}+\beta C^{at}
+\end{equation*}
+
+
+Transversality condition:
+
+\begin{equation*}
+    \lim_{t \to \infty} \bigg \{K(t)e^{-rt} \bigg \}=0 \implies \lim_{t \to \infty} \bigg\{ \beta e^{(a-\overline{r})t}+\frac{C_{0}e^{(\overline{g}_{C}t}}{a-\overline{g}_{C}} \bigg\}=0
+\end{equation*}
+
+\begin{enumerate}
+    \item $a-\overline{g}_{C}>0$
+    \item $\beta = 0 $
+\end{enumerate}
+
+\begin{equation*}
+    K(t)=\frac{C_{0}\cdot e^{\overline{g}_{C}\cdot t}}{a-\overline{g}_{C}} \implies g_{K}=\overline{g}_{C}
+\end{equation*}
+
+\input{1_0_Growth_Theory/1_5_2_Learning_By_Doing.tex}
+
+
+
+
+
+

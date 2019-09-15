@@ -1,0 +1,162 @@
+\subsection{ The Romer (1990) Model}
+
+\subsubsection{Knowledge Production}
+
+A 2 sector model where:
+
+\begin{center}
+\begin{tikzcd}
+ & a_L \cdot L \arrow[r] & \text{R \& D sector} \\
+L \arrow[ru, no head] \arrow[rd, no head]  \\
+ & (1 - a_L)L \arrow[r]  & \text{Goods Sector}
+\end{tikzcd}
+\end{center}
+
+\begin{equation*}
+    \Dot{A}=B(a_{K}\cdot K)^\beta (a_{L}L)^\gamma A^\theta 
+\end{equation*}
+
+\begin{align*}
+    B>0 && \gamma,\beta \geq 0 && \theta \ \text{Can take any value}
+\end{align*}
+
+\subsubsection{A simplified version}
+
+$\alpha=\beta=0$ and $Y=K^\alpha(AL)^{1-\alpha}$.
+
+\begin{equation*}
+    Y=AL(1-a_{L}) \implies g_{Y}=n+g_{A}
+\end{equation*}
+
+Note that $L(1-a-{L})$ is the labor allocated to the goods sector, the rest of the labour stock is used to produce knowledge.  
+
+\begin{equation*}
+    \Dot{A}=B(a_{L}L)^\gamma A^\theta
+\end{equation*}
+
+\begin{equation*}
+    g_{A}=\frac{\Dot{A}}{A}=B(A_{L}L)^\gamma A^{\theta-1}
+\end{equation*}
+
+\begin{equation*}
+    \frac{\Dot{g}_{A}}{g_{A}}=\gamma n - (1-\theta)g_{A}
+\end{equation*}
+
+\begin{equation*}
+    \Dot{g}_{A}=\gamma n g_{A}-(1-\theta)g_{A}^2
+\end{equation*}
+
+At a steady state, 
+\begin{equation}\label{GrowthA}
+    \Dot{g}_{A}=0 \implies g_{A}^*=\frac{\gamma n}{1-\theta}
+\end{equation}
+
+\paragraph{The role of $\theta$}
+The variable $\theta$ in \ref{GrowthA} affects the growth rate in the model. It is defined as the return-to-scale variable for knowledge. 
+
+\begin{enumerate}
+    \item If $\theta<1$ growth is stable, we have decreasing returns to scale on knowledge production, which entails that knowledge production is not productive enough to be sustainable.     In such a case the importance of population growth is evident. That is, if $\theta \leq 1$, only population growth can drive sustained growth in output per worker. 
+
+    \item If $\theta > 1$ we have increasing returns to scale on knowledge production and thus,  growth becomes explosive. 
+    \item If $\theta =  1$ we have constant returns to scale on knowledge production. As in the first case, population growth is crucial for long term growth. However, if there is no population growth, the growth will be constant. 
+\end{enumerate}
+
+
+
+\subsubsection{A more general version}
+
+\begin{equation*}
+    \Dot{K}=sY=s\big[ (1-a_{K})K \big]^\alpha \big[A(1-a_{L})L\big]^{1-\alpha}=
+\end{equation*}
+
+\begin{equation*}
+    =s(1-a_{K})^\alpha(1-a_{L})^{1-\alpha}K^\alpha(AL)^{1-\alpha}
+\end{equation*}
+
+Define $C_{K}$ as $C_{K}=s(1-a_{K})^\alpha(1-a_{L})^{1-\alpha}$
+
+\begin{equation*}
+    g_{K}=\frac{\Dot{K}}{K}=C_{K}\bigg(\frac{AL}{K}\bigg)^{1-\alpha}
+\end{equation*}
+
+\begin{equation*}
+    \frac{\Dot{g}_{K}}{g_{K}}=(1-\alpha)(g_{A}+n-g_{K})
+\end{equation*}
+\begin{equation*}
+    \Dot{g}_{K}=(1-\alpha)(g_{A}+n-g_{K})
+\end{equation*}
+
+
+At a steady state, $\Dot{g}_{K}=0$
+
+\begin{equation*}
+    \Dot{g}_{K}=0 \implies g_{K}=g_{A}+n
+\end{equation*}
+
+\begin{enumerate}
+    \item For $g_{K}>g_{A}+n>0 \implies \Dot{g}_{K}<0$
+    \item For $g_{K}>0 \wedge g_{K}<g_{A}+n \implies \Dot{g}_{K}>0$
+\end{enumerate}
+
+\begin{equation*}
+    \Dot{A}=B(\alpha_{K}K)^\beta(a_{L}L)^\gamma A^\theta
+\end{equation*}
+\begin{equation*}
+    \implies g_{A}=\frac{\Dot{A}}{A}=B(a_{K}K)^\beta(a_{L}L)^\gamma A^{\theta-1}=B a_{K}^\beta a_{L}^\gamma K^\beta L^\gamma A^{\theta-1}
+\end{equation*}
+
+Define $C_{A}$ as $C_{A}=B a_{K}^\beta a_{L}^\gamma$. 
+
+\begin{equation*}
+    \frac{\Dot{g}_{A}}{g_{A}}=\beta g_{K}+\gamma n -(1-\theta)g_{A} \implies \Dot{g}_{A}=\beta g_{K}g_{A}+\gamma n g_{A}-(1-\theta)g_{A}^2
+\end{equation*}
+
+At a steady state, $\Dot{g}_{A}=0$. 
+
+\begin{equation}\label{GrowthA}
+    g_{K}=\frac{(1-\theta)g_{A}-\gamma n}{\beta}
+\end{equation}
+
+
+\paragraph{The role of $\theta$}
+The variable $\theta$ affects the growth rate in the model. It is defined as the return-to-scale variable for knowledge. 
+
+
+If $\theta \geq 1$, $g_{K}$ and $g_{A}$ will both diverge to infinity and growth will be unstable. 
+
+If $\theta \leq 1$, it depends on other variables.
+
+\begin{itemize}
+    \item If $\Dot{g}_{A}=0$ is steeper than $\Dot{g}_{K}=0$
+\end{itemize}
+\begin{equation*}
+    \frac{1-\theta}{\beta}>1 \implies \beta + \theta < 1
+\end{equation*}
+
+\begin{equation*}
+    g_{A}+n=\frac{(1-\theta)g_{A}-\gamma n}{\beta} \implies g_{A}^*=\frac{\beta + \gamma }{1-(\beta+\theta)}n
+\end{equation*}
+
+\begin{itemize}
+    \item If $\Dot{g}_{A}=0$ is flatter than $\Dot{g}_{K}=0$
+\end{itemize}
+
+\begin{equation*}
+    \frac{1-\theta}{\beta}<1 \implies \beta + \theta >1
+\end{equation*}
+
+\begin{itemize}
+    \item If $\Dot{g}_{A}=0$ has the same slope as $\Dot{g}_{K}=0$
+\end{itemize}
+
+\begin{align*}
+    \beta+\theta=1 && n>0
+\end{align*}
+
+
+\subsubsection{Primary conclusions of the Romer Model}
+\begin{enumerate}[i]
+  \item Steady state is reached when ...
+  \item Savings rate $s$ is exogenous and thus dynamic inefficiency can exist.
+  \item Three
+\end{enumerate}

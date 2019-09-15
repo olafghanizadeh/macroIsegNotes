@@ -1,0 +1,303 @@
+\section{The Overlapping Generations (Diamond) model}\label{overlapping-generations-model}
+\subsubsection{Introduction}
+The Ramsey model is useful for looking at how for instance taxation can affect economic growth++
+\subsubsection{General assumptions}
+\begin{enumerate}
+    \item Offspring does not matter. I.e. nothing is saved for future generations and all newborn generations start with 0 assets.
+    \item Households live in 2 periods. One where they are actively contributing in the labor force and another where they are retired and living off savings and returns on investments. I.e. They are young, then they become old before they die. When one generation dies another young generation is born, which is where the name "Overlapping Generations" come from. 
+    \item In the Ramsey Model the agents (households) had infinite lives, here households live forever, but the agents that compose the households do not. 
+    
+\end{enumerate}
+
+\subsubsection{The household utility maximization problem}
+
+\begin{equation}
+\begin{aligned}
+& \underset{U_t}{\max}
+& & U_t=\frac{\mathcal{C}_{1,t}^{1-\theta}-1}{1-\theta}+\frac{1}{1+\rho}*\frac{\mathcal{C}_{2, t+1}^{1-\theta}-1}{1-\theta} & &  \texttt{where} & & \theta > 0  & & \rho > 0
+\end{aligned}
+\end{equation}
+
+Budget constraint in period 1
+\begin{equation*}
+    \mathcal{C}_{1, t}+\mathcal{S}_t=W_t*1=A_t*\omega_t*1
+\end{equation*}
+
+Budget constraint in period 2
+\begin{equation*}
+    \mathcal{C}_{2, t+1}=(1+r_{t+1})*\mathcal{S}_t
+\end{equation*}
+
+\begin{equation}
+    \mathcal{L}=\frac{\mathcal{C}_{1, t}^{1-\theta}-1}{1-\theta}+\frac{1}{1+\rho}*\frac{C_{2, t+1}^{1-\theta}-1}{1-\theta}+\lambda \Bigg[\mathcal{C}_{2, t+1}-(1+r_{t+1})(A_t*\omega_t - \mathcal{C}_{1, t})\Bigg]
+\end{equation}
+
+By partial differentiation we can get the following First Order Conditions (FOC) for utility maximization:
+
+\begin{equation*}
+    \frac{\partial \mathcal{L}}{\partial \mathcal{C}_{1, t}} = \mathcal{C}_{1, t}^{\theta} + \lambda (1+r_{t+1}) = 0
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial \mathcal{L}}{\partial \mathcal{C}_{2, t+1}} = \frac{1}{1-\rho} * \mathcal{C}_{2, t+1}^{-\theta}*\lambda = 0
+\end{equation*}
+
+Which we can write as:
+
+\begin{tcolorbox}[fontupper=\large, fontlower=\normalsize]
+\begin{equation}\label{consumption_euler_equation}
+\frac{\mathcal{C}_{2, t+1}}{\mathcal{C}_{1, t}}= \Bigg( \frac{1+r_{t+1}}{1+\rho} \Bigg)^{\frac{1}{\theta}}
+\end{equation}
+\tcblower
+The Consumption Euler equation in discrete time
+\end{tcolorbox}
+
+\begin{equation*}
+    \bigg(\frac{1+r_{t+1}}{1+\rho}\bigg)^{\frac{1}{\theta}}\mathcal{C}_{1t}=(1+r_{t+1})(A_{t}\omega_{t}-\mathcal{C}_{1t})
+\end{equation*}
+\begin{equation*}
+    \mathcal{C}_{1t}=\frac{1+r_{t+1}}{1+r_{t+1}\big(\frac{1+r_{t+1}}{1+\rho}\big)^{\frac{1}{\theta}}}A_{t}\omega_{t}
+\end{equation*}
+
+Consumption of young individuals in period t. 
+\begin{equation*}
+    \mathcal{S}_{t}= A_{t}\omega_{t}-\mathcal{C}_{1t}=...=s(r_{t+1})A_{t}\omega_{t}=s(r_{t+1})\omega_{t}
+\end{equation*}
+\begin{equation*}
+    s(r_{t+1})=\frac{(1+r_{t+1})^\frac{1-\theta}{\theta}}{(1+\rho)^\frac{1}{\theta}+(1+r_{t+1})^\frac{1-\theta}{\theta}}
+\end{equation*}
+
+Savings as a function of the interest rates of period $t+1$.
+
+\begin{equation*}
+    \frac{d s_{t}}{d r_{t+1}}=\frac{1-\theta}{\theta}\bigg(\frac{1+\rho}{1+r_{t+1}} \bigg)^\frac{1}{\theta}s_{t}^2
+\end{equation*}
+
+\begin{itemize}
+    \item $\theta=1 \implies \frac{ds_{t}}{d r_{t+1}}=0 \implies U_{t}=ln(\mathcal{C}_{1t})+\frac{1}{1+\rho}.ln(\mathcal{C}_{2,t+1})$
+    \item $\theta < 1 \implies \frac{ds_{t}}{dr_{t+1}}>0$
+    \item $\theta > 1 \implies \frac{ds_{t}}{dr_{t+1}}<0$
+\end{itemize}
+
+One should note that $s_{t}$ is the savings rate, taken as endogenous. $\mathcal{S}$ is the savings per household, while $S$ is the total savings in the economy.
+
+Also, $\mathcal{C}_{i,t}$ is the consumption of the group (young or old people) i ($i=1,2$) per household, at time $t$, while $C_{t}$ is the total consumption in the economy at time $t$.
+
+\subsubsection{Capital Accumulation}
+\begin{itemize}
+    \item $\mathcal{C}_{1t}=W_{t1}-S_{t}$
+    \item $\mathcal{C}_{2t}=(1+r_{t})S_{t-1}$
+\end{itemize}
+\begin{equation}
+    K_{t+1} = K_t + W_t  L_t + R_t * K_t - \delta K_t -(L_t*\mathcal{C}_{1t} + L_{t-1}*\mathcal{C}_{2t})
+\end{equation}
+In the above equation the we can see that the $W_tL_t+R_tK_t=Y_t$, $L_t*\mathcal{C}_{1t} + L_{t-1}*\mathcal{C}_{2t}=C_{t}$, and, $R_{t}=r_{t}+\delta$.
+\begin{equation*}
+    K_{t+1}=K_{t}+W_{t}L_{t}+(r_{t}+\delta)K_{t}-\delta K_{t}-L_{t}(W_{t}-\mathcal{S}_{t})-L_{t-1}(1+r_{t})\mathcal{S}_{t-1}
+\end{equation*}
+\begin{equation*}
+    K_{t+1}=(1+r_{t+1})(K_{t}-L_{t}\mathcal{S}_{t-1})+L_{t}\mathcal{S}_{t}
+\end{equation*}
+To see how capital accumulation works, imagine that you're looking at the beginning of times and there is no capital or savings from the previous period (because there is no previous period).
+
+$t=0$
+\begin{equation*}
+    K_{1}=L_{0} \mathcal{S}_0
+\end{equation*}
+
+$t=1$
+\begin{equation*}
+    K_{2}=L_{1} \mathcal{S}_{1}=S_{1}
+\end{equation*}
+
+$t=2$
+\begin{equation*}
+    K_{3}=L_{2} \mathcal{S}_{2}=S_{2}
+\end{equation*}
+
+Hence, 
+
+\begin{equation*}
+    K_{t+1}=S_{t}=L_{t}\mathcal{S}_{t}=L_{t}s(r_{t+1})W_{t}=L_{t}s(r_{t+1})A_{t}\omega_{t}
+\end{equation*}
+
+Note that $A_{t}=A_{0}(1+g)^t$, and $L_{t}=L_{0}(1+n)^t$.
+
+The function for capital per unit of effective labour accumulation comes as:
+
+\begin{equation*}
+    k_{t+1}=\frac{K_{t+1}}{A_{t+1}L_{t+1}}=\frac{L_{t}s(r_{t+1})A_{t}\omega_{t}}{A_{t+1}L_{t+1}}=\frac{L_{t}s(r_{t+1})A_{t}\omega_{t}}{A_{t}(1+g)L_{t}(1+n)}=\frac{s(r_{t+1})\omega_{t}}{(1+g)(1+n)}
+\end{equation*}
+
+Workers are remunerated by their marginal product: 
+
+\begin{equation*}
+    w_{t}=MPL_{t} \implies A_{t}\omega_{t}=A_{t}\big[f(k_{t})-k_{t}f'(k_{t}) \big]
+\end{equation*}
+
+Also, capital is paid it's marginal product: 
+
+\begin{equation*}
+    R_{t}=MPK_{t} \implies r_{t+1}+\delta=f'(k_{t+1}) \implies r_{t+1}=f'(k_{t+1})-\delta
+\end{equation*}
+\begin{equation*}
+   \implies k_{t+1}=\frac{1}{(1+g)(1+n)}s(f'(k_{t+1})-\delta)\big[f(k_{t})-k_{t}f'(k_{t}) \big]
+\end{equation*}
+
+Say $k_{t+1}=h(k_{t},\overline{n},\overline{g},\delta)$, and $\beta=\frac{1}{(1+g)(1+n)}$.
+
+\begin{equation*}
+    \frac{\partial k_{t+1}}{\partial k_{t}}=\frac{s_{t}\beta k_{t}f''(k_{t})}{1-\beta s'(r_{t+1})f''(k_{t+1})\omega_{t}}
+\end{equation*}
+
+\subsubsection{Long-run Equilibrium}
+
+\subsubsection{A particular case}
+\begin{itemize}
+    \item Cobb-Douglas production function $y_{t}=k_{t}^{\alpha} \implies f'(k_{t})=\alpha k_{t}^{\alpha-1}$
+    \item Logarithmic Utility $\theta=1 \implies s=\frac{1}{2+\rho} \implies s'=0$
+\end{itemize}
+
+\begin{equation*}
+   k_{t+1}= \frac{1}{(1+n)(1+g)}\frac{1}{2+\rho}\bigg[ k_{t}^\alpha-k_{t}k_{t}^{\alpha-1}\alpha \bigg]
+\end{equation*}
+
+\begin{equation*}
+    k_{t+1}=\frac{1-\alpha}{(1+n)(1+g)(2+\rho)}k_{t}^{\alpha} \implies k^{*}=\bigg[\frac{1-\alpha}{(1+n)(1+g)(2+\rho)} \bigg]^{\frac{1}{1-\alpha}}
+\end{equation*}
+
+\begin{equation*}
+    \frac{\partial k_{t+1}}{\partial k_{t}} \bigg \rvert_{k_{t}=k^*}=\frac{1-\alpha}{(1+n)(1+g)(2+\rho)}\alpha k^{\alpha-1}=\alpha \in ]0, 1[
+\end{equation*}
+
+\subsubsection{Dynamic inefficiency in the OLG Model}
+\begin{equation*}
+    K_{t+1}=(1-\delta)K_{t}+Y_{t}-C_{t}
+\end{equation*}
+\begin{equation*}
+    \frac{K_{t+1}}{A_{t}L_{t}}=(1-\delta)k_{t}+y_{t}-c_{t}
+\end{equation*}
+\begin{equation*}
+    (1+g)(1+n)k_{t+1}=(1-\delta)k_{t}+f(k^*)-c_{t}
+\end{equation*}
+\begin{equation*}
+    c_{t}^*=\big[(1-\delta)(1+g)(1+n)\big]k^{*}+f(k^*)
+\end{equation*}
+\begin{equation*}
+    f'(k_{G})=\delta+(1+g)(1+n)-1
+\end{equation*}
+\begin{equation}
+    k_{G}=\bigg[\frac{\delta+(1+g)(1+n)-1}{\alpha}\bigg]^{\frac{1}{1-\alpha}}
+\end{equation}
+\begin{equation}
+    k^*=\bigg[ \frac{1-\alpha}{(1+n)(1+g)(2+\rho)} \bigg]^{\frac{1}{1-\alpha}}
+\end{equation}
+
+So can there be dynamic inefficiency in an OLG model? Yes. There is no guarantee that $k^*<k_{G}$, it depends on the values of the exogenous growth rates of which $k^*$ and $k_{G}$ depend. Dynamic inefficiency in the OLG-model can be alleviated with a pension scheme.
+
+\subsubsection{Social Security - Pensions}
+First Recall the entire model, this time, with government.
+
+\begin{equation}
+    \frac{\mathcal{C}_{2,t+1}}{\mathcal{C}_{1t}}=\bigg(\frac{1+r_{t+1}}{1+\rho}\bigg)
+\end{equation}
+\begin{equation}
+    \mathcal{C}_{1t}=W_{t}-(\mathcal{S}_{t}+d_{t})
+\end{equation}
+\begin{equation}
+    \mathcal{C}_{2,t+1}=(1+r_{t+1})\mathcal{S}_{t}+b_{t}
+\end{equation}
+\begin{equation}\label{Cap_acc_OLG}
+    K_{t+1}=(1-\delta)K_{t}+W_{t}L_{t}(r_{t}+\delta)K_{t}-L_{t}\mathcal{C}_{1t}-L_{t-1}\mathcal{C}_{2t}
+\end{equation}
+\begin{equation}
+    W_{t}=A_{t}\bigg[ f(k)-k_{t}f'(k_{t})\bigg]
+\end{equation}
+\begin{equation}
+    r_{t}=f'(k_{t})-\delta
+\end{equation}
+\begin{equation*}
+    \implies K_{t+1}=(1+r_{t})(K_{t}-L_{t-1}\mathcal{S}_{t-1})+L_{t}(\mathcal{S}_{t}+d_{t})-L_{t-1}b_{t}
+\end{equation*}
+
+Note that $b_{t}=d_{t}$ (one agents tax is another's benefit - no deficits, no surplus).
+
+The pension system can be one of two types: fully funded, or pay-as-you-go. 
+
+\subsubsection{Fully Funded}
+\begin{equation}
+    b_{t}=(1+r_{t})d_{t-1}
+\end{equation}
+
+$t=0$
+\begin{equation*}
+    K_{1}=(1+r_{0})(K_{0}-L_{-1}\mathcal{S}_{-1})+L_{0}(\mathcal{S}_{0}+d_{0})-L_{-1}(1+r_{0})d_{-1}=L_{0}(\mathcal{S}_{0}+d_{0})=L_{0}\Sigma_{0}
+\end{equation*}
+
+$t=1$
+\begin{equation*}
+    K_{2}=(1+r_{1})(K_{1}-L_{0}\mathcal{S}_{0})+L_{1}(\mathcal{S}_{1}+d_{1})-L_{0}(1+r_{1})d_{0}=L_{1}(\mathcal{S}_{1}+d_{1})=L_{1}\Sigma_{1}
+\end{equation*}
+
+Hence, replace \ref{Cap_acc_OLG}, by the following equation:
+\begin{equation*}
+    (1+n)(1+g)L_{t}A_{t}k_{t+1}=L_{t}\Sigma_{t} \implies (1+n)(1+g)A_{t}k_{t+1}=\Sigma_{t}
+\end{equation*}
+\begin{equation*}
+    \mathcal{C}_{1t}=W_{t}-\Sigma_{t}
+\end{equation*}
+\begin{equation*}
+    \mathcal{C}_{2,t+1}=(1+r_{t+1})\Sigma_{t}
+\end{equation*}
+
+\begin{equation*}
+    \begin{aligned}
+        d_{t}<\mathcal{S}_{t}\bigg \rvert_{without SS} \implies \mathcal{S}_{t}\bigg\rvert_{with SS}>0
+    \end{aligned}
+\end{equation*}
+
+\subsubsection{Pay-as-you-go}
+\begin{equation*}
+    L_{t-1}b_{t}=L_{t}\frac{b_{t}}{1+n}=L_{t}\frac{1+n}{1+n}d_{t}=L_{t}d_{t}
+\end{equation*}
+\begin{equation*}
+    K_{t+1}=(1+r_{t})(K_{t}-L_{t-1}\mathcal{S}_{t-1})+L_{t}(\mathcal{S}_{t}+d_{t})-L_{t}d_{t}=(1+r_{t})(K_{t}-L_{t-1}\mathcal{S}_{t-1})+L_{t}\mathcal{S}_{t}
+\end{equation*}
+
+Using the same type of rationale, replace \ref{Cap_acc_OLG}, by the following equation: 
+\begin{equation*}
+    (1+n)(1+g)A_{t}K_{t+1}=\mathcal{S}_{t+1}
+\end{equation*}
+
+\begin{equation*}
+    (1+r_{t+1})d\mathcal{S}_{t}+(1+n)dd_{t+1}=\bigg(\frac{1+r_{t+1}}{1+\rho}\bigg)^{\frac{1}{\theta}}(d\mathcal{S}_{t}-dd_{t})
+\end{equation*}
+
+\begin{equation*}
+    \frac{d\mathcal{S}_{t}}{d d_{t}}=-\frac{1+n+\beta_{t+1}}{1+r_{t+1}+\beta_{t+1}}<0
+\end{equation*}
+
+Where, $\beta_{t+1}=\big(\frac{1+r_{t+1}}{1+\rho}\big)^{\frac{1}{\theta}} $
+
+\begin{equation*}
+    r_{t}=f'(k)-\delta
+\end{equation*}
+\begin{equation*}
+    W_{t}=A_{t}\bigg[ f(k_{t})-k_{t}f'(k_{t})\bigg]
+\end{equation*}
+
+\begin{equation*}
+    d^*\nearrow \implies f^*\searrow \implies k^*\searrow \implies W^*\searrow
+\end{equation*}
+
+If we assume that $\frac{d K_{t+1}}{d K_{t}}<0$, then, $\frac{dk^*}{d d^*}<0$
+
+
+
+
+\subsubsection{Primary conclusions of the OLG Model}
+\begin{enumerate}[i]
+  \item Steady state is reached when ...
+  \item Saving and consumption decisions are endogenous, but dynamic inefficiency can still exist.
+  \item Equilibria may be "dynamically inefficient" feature overaccumulation: unfunded Social Security can ameliorate the problem.
+\end{enumerate}

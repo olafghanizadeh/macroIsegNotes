@@ -1,0 +1,135 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{report}
+ 
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb, diagbox, enumerate, textcomp, caption, subcaption, tabu, xcolor, csquotes,tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{pgfplots}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\pgfplotsset{compat=1.15}
+
+\newtcolorbox{mybox}{fontupper=\footnotesize}
+
+
+\usepackage[export]{adjustbox}% 'export' allows adjustbox keys in \includegraphics
+
+
+
+\usepackage{chngcntr}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{references.bib}% Syntax for version >= 1.2
+
+% English language.
+\usepackage[english]{babel}
+
+
+\usepackage[notextcomp]{stix}% Stix font
+\usepackage{helvet}% Helvetica, served as a model for arial
+\usepackage{xcolor}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\bfseries}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\sffamily\Large\bfseries}
+  {\thesection}{1em}{}
+  \titleformat{\subsection}
+  {\normalfont\sffamily\large\bfseries}
+  {\thesubsection}{1em}{}
+   \titleformat{\subsubsection}
+  {\normalfont\sffamily\normalsize\bfseries}
+  {\thesubsubsection}{1em}{}
+     \titleformat{\paragraph}
+  {\normalfont\sffamily\normalsize\bfseries}
+  {\theparagraph}{1em}{}
+  
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\normalfont\sffamily\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\normalfont\sffamily\bfseries}
+
+\usepackage[T1]{fontenc}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+%\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\sffamily\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\sffamily\Huge\bfseries}
+
+
+
+
+
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{
+Lecture Notes \\
+\large Macroeconomics \\
+MeC @ ISEG --- 2018/2019
+}
+\author{Olaf Ghanizadeh \& Rui Vieira Santos}
+
+
+
+ 
+\maketitle
+
+ 
+\tableofcontents
+
+\newpage
+
+\chapter{Economic Growth Theory}
+\input{1_0_Growth_Theory/0_1_0_Growth_Theory.tex}
+\chapter{The New Classical School}
+\input{2_0_New_Classical_School/0_2_0_New_Classical_School.tex}
+\chapter{Real Business Cycles}
+\input{3_0_Real_Business_Cycles/0_3_0_Real_Business_Cycles.tex}
+\newpage
+\input{4_0_New_Keynesian_School/4_0_New_Keynesian.tex}
+\newpage
+\chapter{The New Macroeconomics}
+\input{5_0_The_New_Macroeconomics/5_0_New_Macroeconomics.tex}
+
+
+\printbibliography
+
+
+
+
+
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}

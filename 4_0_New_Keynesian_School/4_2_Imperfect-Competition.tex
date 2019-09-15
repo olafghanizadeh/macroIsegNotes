@@ -1,0 +1,746 @@
+\section{Imperfect competition in the Goods Market}
+
+
+
+\subsection*{Consequences of imperfect competition in partial equilibrium}
+
+
+\subsubsection{Firms}
+
+Firm $i$ competes with other firms in the same industry, using quantity as their strategic variable to determined the price. This is known as \textit{Intra-industrial Cournot Competition}. In addition, they take the average price level as given. 
+
+Firm $i$ produces good $j$ and has the following profit function $\Pi_i (j)$
+\begin{equation*}
+    \Pi_i(j) = p ( j ) \cdot  y _ { i }(j) - \text{TC}_i(j)
+\end{equation*}
+
+The condition to maximizing profits under imperfect competition is given by:
+$$
+MR_i = MC_i 
+$$
+ Maximizing profits yields:
+ $$
+ MC_i (y_i) = p(j)\left( 1 + \frac{1}{\epsilon_i(j)} \right)
+ $$
+ 
+ 
+ The Price Elasticity is given by:
+ $$
+ \epsilon_i (j) = \frac{\partial Y}{\partial p(j)} \cdot \frac{p(j)}{Y_i} < 0 
+ $$
+Which is negative 
+
+\paragraph{}
+ Marginal Revenue for a firm under imperfect competition is always below the price. We know that a firm under perfect competition is a price taker. Under imperfect competition, the firm knows that if they want to sell more they have to reduce the price, depending on the price elasticity. The expression and result of the elasticity depends on the market structure. 
+ 
+ If we assume that labour is the only input, the profit function will be given by:
+
+ $$
+ \Pi_i = p(j)\left[\underbrace{A_i \cdot f(N_i - \Phi)}_\mathbf{{Y_i}}   \right] A_i (N_i - \Phi) - wN_i
+ $$
+ 
+ 
+
+ Where $\Phi$ is fixed administrative costs, $N_i$ is the labour required by the firm and $A_i$ is productivity of labour. 
+ 
+ $$
+ \text{MPL}_i (N_i - \Phi ) \left( 1 + \frac{1}{\epsilon_i (j)} \right) = \frac{w}{p(j)}
+ $$
+ 
+  Under perfect competition the marginal product of labour should be equal to the wage, but this is not the case under imperfect competition, where we also need to consider the elasticity.
+ Imperfect competition in the gods market also has spillover effects into the labour market, because lower production leads to lower labour demand. There is no involuntary unemployment, because the wage rate is lower and people would not want to work as much. Imperfect competition in the goods market is not enough to generate unemployment, however, it will generate underemployment compared to the perfect competition equilibrium. 
+ 
+ 
+ \subsection{A Simple General Equilibrium Model with Imperfect Competition compared with Non-Walrasian equlibrium}
+ 
+ \subsubsection{Assumptions}
+ \begin{itemize}
+     \item $U_m = \emptyset$ --- No Utility of Money, meaning that fiscal policy is the only thing that is important. 
+     \item $M_E = 0$ --- No money endowment
+     \item $m = 1$ --- The continuum of goods. All industries are the same, with one producer in each industry. Number of producers in a given industry, ie. we have monopolistic competition where firms compete on prices in a Bertrand like situation with slightly differentiated products. Every producer is a monopolist, but the goods are substitutes in some manner.  
+     \item $\beta  = 1 $
+     \item $A_i = 1$ --- Constant technology/productivity to simplify
+     \item $\Psi = 0$ --- No Menu Costs
+\end{itemize}
+
+\subsubsection{Households}
+
+
+Households are deciding between consumption and leisure
+\begin{equation*}
+\begin{aligned}
+& \underset{C, Z}{\max}
+& & U(C,Z) \\
+& \text{s.t}
+& & wL + \Pi -T = \int_{0}^{n} p(j) \cdot c(j) \cdot dj \\
+& & & Z = 1 - L \\
+& & & T = T_0 + t(wL + \Pi) \\
+& & & C = \left[ n^{\frac{\lambda - 1}{\sigma}} \cdot \int_{0}^{n} c(j)^{\frac{\sigma - 1}{\sigma}} \cdot dj   \right]^\frac{\sigma}{\sigma - 1}
+\end{aligned}
+\end{equation*}
+
+Where $\lambda \in \left[0,1 \right]$, and represents the love for variety. If $\lambda = 0$ you are indifferent between the different goods, with a $\lambda > 0$ you get more utility of consuming a more varied set of goods. 
+
+\subsection*{1st step}
+With homothetic preferences we can use the constraint to rearrange:
+$$
+wL + \Pi - T = PC
+$$
+
+Where $P$ is the price index and $C$ is the consumption index. Thus $PC$ can be seen as a cost-of-living index. 
+
+Then we can substitute the tax function:
+$$
+wL + \Pi - T_0 + t(wL + \Pi) = PC
+$$
+
+Dividing by $P$ and solving for $C$ yields:
+$$
+C = \frac{w(1-t)}{P}L_t + \frac{\Pi(1-t)-T_0}{P}
+$$
+
+Where $\frac{w(1-t)}{p}L_t$ is the labour-income which we define as $\omega_N$ and $\frac{\Pi(1-t)-}{p}$ is the non-labour income (dividends etc.) that does not depend on labour, which we define as $\Theta_N$. Thus consumption can be written as:
+
+$$
+C = \Theta_N + \omega_N \cdot L 
+$$
+
+
+The consumption decision is therefore a function of the real wage and non-labour income. 
+$$
+C \equiv \mathcal{C}\left(\omega_N, \Theta_N \right)
+$$
+
+Given that leisure and the consumption good are normal goods. We have the following partial derivatives:
+
+\begin{align*}
+    \frac{\partial \mathcal{C}}{\partial \omega_N} > 0 && \frac{\partial \mathcal{C}}{\partial \Theta_N} > 0
+\end{align*}
+
+An increase in the real wage increases consumption, the same for an increase in non-labour income. 
+
+
+
+The labour decision is a function of the real wage and non-labour income. 
+$$
+L \equiv \mathcal{L}\left(\omega_N, \Theta_N  \right)
+$$
+
+\begin{align*}
+    \frac{\partial \mathcal{L}}{\partial \omega_N} > 0  && \frac{\partial \mathcal{C}}{\partial \Theta_N} < 0
+\end{align*}
+
+An increase in the real wage has two effects on the labour supply, but we can't say for sure which effect is stronger: 
+\begin{itemize}
+    \item When the wage rate goes up, leisure is more expensive and you want less leisure because of the substitution effect. 
+    \item With a higher wage rate, you can have more income and you want to work more. 
+\end{itemize}
+
+An increase in non-labour income leads to a lower labour supply. 
+
+\subsection*{2nd Step --- Finding the optimal inflation}
+
+\begin{equation*}
+\begin{aligned}
+& \underset{c_j}{\min}
+& & \int _ { 0 } ^ { n } p(j) \cdot c(j) \cdot dj \\
+& \text{s.t}
+& & C = n^\frac{1 - \lambda}{1 - \sigma}  \left[\int _ { 0 } ^ { n } c(j)^\frac{\sigma - 1}{\sigma} dj     \right]^\frac{\sigma}{\sigma - 1} 
+\end{aligned}
+\end{equation*}
+
+The demand function for good $j$
+$$
+c(j) = \left[ \frac{p(j)}{P}  \right]^ - \sigma \cdot \frac{C}{n^{1 - \lambda}}
+$$
+
+The demand function consists of two parts:
+\begin{itemize}
+    \item If $\lambda = 0$, if all prices are the same, the consumption of good $j$ will just be just dividing the number of baskets by the number of goods. 
+    \item If the good is more expensive the average good, you want to consume less of good $j$ and more of the other goods.
+\end{itemize}
+
+
+The price index $P$ is given by:
+$$
+P = \left[\frac{1}{n^{1 - \lambda}} \int_0^n p(j)^{1 - \sigma} dj  \right]^\frac{1}{1 - \sigma}
+$$
+
+\subsubsection{Government}
+
+$$
+T = \int _ { 0 } ^ { n } p ( j ) \cdot y ( j ) \cdot d j
+$$
+
+
+Government has a similar demand to the consumers for the goods in the economy:
+$$
+G = h ^ { \frac { 1 - \lambda } { 1 - \sigma } } \left[ \int _ { 0 } ^ { n } g ( j ) d \right) ] ^ { \frac { \sigma - 1 } { \sigma } }
+$$
+
+
+Which can be written as:
+
+$$
+g(j) = \left[ \frac{p(j)}{p} \right]^\sigma \cdot \frac{G}{n^{1-\lambda}}
+$$
+
+
+\subsubsection{Firms}
+
+Total production of good $j$ --- which is only produced by firm $i$:
+
+$$
+Y(j) = c(j) + g(j) = \left[  \frac{p(j)}{P}  \right]^{-\sigma} \cdot \frac{D}{n^{1-\lambda}}
+$$
+
+Where $D$ is the total of private and government consumption, in other words; aggreagate demand:
+$$D \equiv C + G$$
+
+Because we are under monopolistic competition, $D$ is both the market demand in industry $j$ and the demand function faced by each individual firm. In another market structure, such as oligopoly, the Demand would be shared between the firms. 
+
+In monopolistic competition will be given for each firm, so the individual firm can take $D$ as given, the same goes for $\mathbf{P}$ and the mass of the continuum of goods; $\overline{n}$. The firm can use this assumption because it is very small compared to the economy as a whole. For instance, an increase in the individual price would not be able to affect the price index $\mathbf{P}$
+
+
+The profit maximization problem for the firm is now:
+\begin{equation*}
+\begin{aligned}
+& \underset{}{\max}
+& & \Pi(j) = p(j) \cdot y(j) - wN(j) \\
+& \text{s.t}
+& & p(j) = \mathbf{P} \left[ \frac{y(j) n^{1-\lambda}}{D} \right]^{ - \frac{1}{\sigma}} \\
+& & & y(j) + \Phi = \underset{\mathbf{A}}{1} \cdot N(j)
+\end{aligned}
+\end{equation*}
+
+
+Given the first order condition for profit maximization in imperfectly competitive markets:
+$$
+\text{FOC: } MR = MC
+$$
+
+We get:
+$$
+p ( j ) \cdot \left[ 1 + \frac { 1 } { \epsilon ( p ) } \right] = \underbrace{MC \left[ y(j) \right]}_{\frac{w}{A} = N}
+$$
+
+$$
+\epsilon_i (j) = - \frac{\sigma}{v(j) \cdot s_ij}
+$$
+
+$$
+V(j) = \frac{y(j)}{\frac{D}{n}}
+$$
+
+Where $V(j)$ expresses an industry production compared to the average industry, thus if $V(j) > 1 $ we are producing more than the average and $V(j) < 1 $ we are producing less than the average.  
+
+$$
+S_i (j) = \frac{y_i(j)}{Y(j)}
+$$
+
+$S_i$ expresses the production of firm $i$ that produces $j$ divided by the production in the industry, thus $S_i$ is a firms share in an industry. If all firms are equal in each industry and we have $m$ firms the $S_i$ equation is simply:
+
+$$
+\frac{1}{m}
+$$
+
+Since we are talking about monopolistic competition this is simply 1. Intra industrial symmetrical eq???
+
+
+\paragraph{Lerner Index:}
+
+$$
+\mu(j) = \frac{p(j) - MC(j) }{p(j)} \in \left[ 0,1 \right]
+$$
+
+The Lerner Index is a measure of a firms market power in a given industry. A larger $\mu$ implies a stronger market power of firm $j$.
+
+In our case $\mu = 1/\sigma$, which we get by substituting the expression for $p(j)$ and since we only have labour $MC = w$
+
+\subsubsection*{Macroeconomic Variables}
+
+In any macroeconomic model we need ... . Imagine that you have $n$ goods in an economy. How many prices would you have? $n - 1$ prices, because you have to express the absolute prices of all the goods in terms of another good. Since we don't have money in this economy we have to chose a good to act as the \textit{numeraire}. Under perfect competition any good can be the numeraire, however, in imperfect competition it is not as straightforward as it can change the outcome as the results. In this case we chose the price of the consumption basket $\mathbf{P}$ as our numeraire. The $\mathbf{P}$ is defined as:
+
+$$
+\mathbf{P} = \left[  \frac{1}{n^{1-\lambda}} \cdot \int_0^n p(j)^{1-\sigma} \cdot dj \right]^\frac{1}{1 - \sigma}
+$$
+
+We can simplify this into: 
+$$
+\mathbf{P} = \left[  \frac{1}{n^{1-\lambda}} \cdot n\cdot p^{1-\sigma}  \right]^\frac{1}{1 - \sigma} \implies n^{- \frac{\lambda}{\sigma - 1} }p
+$$
+
+If all the firms are the same, the average price is not equal to the individual price, unless there is no love for variety. 
+
+Value added GDP:
+$$
+Y = \int_{0}^{n} \frac{p(j) y(j)}{\mathbf{P}}dj
+$$
+
+Because $\mathbf{P = 1}$ and we know $p(j)$ and all firms are identical so we can calculate 
+
+$$
+n^{1 + \frac{\lambda}{\sigma - 1}} \cdot y(j)
+$$
+
+If there is market clearing in each industry then:
+$$
+Y(j) = c(j) + g(j) \implies C + G
+$$
+
+Love for variety....
+
+
+
+Profits
+
+
+
+$$
+\pi \int _ { 0 } ^ { n } \pi ( j ) d j = n \left[p(j) y(j) - wN(j) \right]
+\implies
+np(j)y(j) - nw\left( y(j) + + \Phi \right)
+$$
+
+Real profits $\tfrac{\pi}{P}$, but since $P = 1$:
+
+$$
+\pi = \mu \cdot y - n^{1 + \frac{\lambda}{\sigma - 1}} \cdot ( 1 - \mu) \Phi
+$$
+
+Ignoring fixed costs $\Phi = 0$ and $\mu = 0$:
+
+$$
+Y \implies = 0
+$$
+
+To get perfect competition, you need constant returns to scale as well as $\mu = 0$
+
+
+
+Labour Market:
+$$
+L = \int_0^n N(j) dj \implies \int_0^n \left[y(j) + \Phi \right]dj
+$$
+
+\paragraph{A General Formulation of the equilibrium}
+$$
+Y = C + G = Y = \mathcal{C} \left(\omega_N, \Theta_N \right) + G
+$$
+
+$$
+\omega_N \equiv \frac{w}{P}(1-t) \implies (1-t)n^{\frac{\lambda}{\sigma - 1}} (1-\mu)
+$$
+
+$$
+\Theta_N \equiv \frac{\pi(1-t) - T_0}{\mathbf{P}} = (1-t)\left[ \mu y - n^{\frac{1 + \lambda}{\sigma - 1}} \cdot (1 - \mu) \Phi \right] - T_0
+$$
+
+Inefficiency results from imperfect competition:
+\begin{itemize}
+    \item Welfare is lower in imperfect competition
+    \item Consumption is lower
+    \item Output i slower
+    \item Employment is lower. 
+\end{itemize}
+
+
+The equilibrium values are given by the following equations. Where they are functions of different values, but in this case we are focusing on $G$. 
+
+\begin{align*}
+    w^* = w(G,...) && \pi^* = \pi(G,...) && t^* = t(G,...) && T_0 = T_0(G,...)
+\end{align*}
+
+$$
+Y^* = \mathcal{C} \left[w^*(1-t^*), \pi^*(1-t^*) - T_0 \right] + G
+$$
+
+
+$$
+Y^* = w^*L^* + \pi^* 
+$$
+
+
+\begin{tcolorbox}[fontupper=\large, fontlower=\normalsize]
+\subsubsection{Fiscal Policy Effectivness}
+\begin{equation}\label{fiscal_policy_effectivness}
+dY^* = \mathcal{C}^*_{\omega_N} \left[(1-t)dw^* - w^* dt^* \right] + \mathcal{C}^*_{\Theta_N}\left[(1-t)d\pi^* - \pi^* dt^* - dT_0 \right] +dG
+\end{equation}
+\tcblower
+To derive the value of the output government-consumption multiplier, $m^* = \frac{dY^*}{dG}$
+\end{tcolorbox}
+
+
+\begin{align*}
+    \frac{\partial \mathcal{C}}{\partial \omega_N} \equiv \mathcal{C}^*_{\omega_N}
+&& \frac{\partial \mathcal{C}}{\partial \Theta_N} \equiv \mathcal{C}^*_{\Theta_N}
+\end{align*}
+
+In the initial equilibrium there are no pure profits, thus $\pi = 0$ so equilibrium output is only dependent on labour income
+
+
+\paragraph{Case 1: Government Controls $t$ and $G$}
+In this case the government controls both the marginal tax rate and public expenditure. By looking at the government budget constraint, you will see that the lump sum tax becomes endogenous because we have no deficits: $T_0 = G - tY^*$
+
+
+$$
+dt^* = 0 \implies dT^*_0 = dG - t \cdot \frac{\partial Y^*}{\partial G}
+$$
+
+Which you can replace in \ref{fiscal_policy_effectivness}.
+
+\paragraph{Case 2: No Lump Sum Taxes and Government controls $G$}
+
+
+$$
+t^* = \frac{G}{Y^*}
+$$
+
+
+$$
+dT_0 = 0 \implies dt^* = \frac{dGY^* - \frac{\partial Y^*}{G}dG \cdot G}{(Y^*)^2} \implies \left( 1 - \frac{\partial Y^*}{G} \cdot \frac{G}{Y^*} \right) \cdot \frac{dG}{Y^*}
+$$
+
+
+
+
+
+\subsection{The initiators: Dixon(1987) and Mankiw(1988)}
+
+Recall equation \ref{fiscal_policy_effectivness} where we now define $\mathcal{C}^*_{\omega_N}$ and $\mathcal{C}^*_{\Theta_N}$ as $\alpha$ for simplificiation purposes. 
+Two similar models. 
+
+Assumptions
+
+Assuming a Cobb-Douglas Utility function:
+
+
+\begin{align*}
+    U = C^\alpha Z^{1-\alpha} && 0 < \alpha < 1
+\end{align*}
+
+Consumption is given by:
+
+\begin{equation}\label{consumption}
+    C = \alpha \left( w _ { N } + \Theta _ { N } \right)
+\end{equation}
+
+
+
+Labour supply is given by:
+$$
+L = 1 - ( 1- \alpha) \frac{\omega_N + \Theta_N}{\omega_N}
+$$
+
+Where $\alpha$ can be seen as the marginal propensity to consume for both labour and non-labour income. 
+
+
+A few asumptions:
+
+
+Since we only have have lump sum taxes:
+
+$$
+t^* = 0 \implies dt^* = 0
+$$
+
+The marginal tax rate is zero and it does not change. 
+
+No Love for variety: 
+
+$$
+\lambda = 0
+$$
+
+
+The mass continuum of the goods is fixed, and it does not change:
+$$
+n = \overline{n} \implies dn^* = 0
+$$
+
+Output in equilibrium:
+
+$$
+Y^* = \alpha \left( w^* \cdot 1 - \pi^* - T^*_0 \right) + G
+$$
+
+The real wage and the aggregate price index is given by:
+\begin{align*}
+    w^* = 1 - \mu
+    &&
+    \mathbf{P} = 1
+\end{align*}
+
+
+Profits are:
+$$
+\pi = \mu Y^* - \overline{n}(1-\mu) \cdot \Phi
+$$
+
+Ricardian economy with no deficit budgets and any increase in government needs to be finaned with increased taxes:
+$$
+T_0 = G
+$$
+
+
+Solving the model:
+
+\begin{equation*}
+    Y^* = \frac{\alpha (1- \mu) \cdot (1- \overline{n} \Phi)}{1 - \alpha \mu} + \frac{1 - \alpha}{1 - \alpha \mu}G
+\end{equation*}
+
+\begin{equation*}
+    dy^*=\mathcal{C}_{\omega N}^* \bigg[(1-t^*)dw^* - w^*dt^* \bigg] + \mathcal{C}_{\Theta N} \bigg[ (1-t)d\pi^*-\pi^*dt^*-dT_{0}^*\bigg] + dG      
+\end{equation*}
+
+$$
+ \left. \frac{\partial Y^*}{\partial G} \right\rvert_{dT^*_0 = dG} = \frac{1 - \alpha}{1 - \alpha \mu} > 0
+ $$
+ 
+ Which is the fiscal multiplier $m^*$, which is positive, thus fiscal policy is effective even with a balanced-budget multiplier. 
+ 
+
+Deriving the multiplier. First look at the derivatives of \ref{consumption} with respect to net real wage and non-labour income:
+
+\begin{align*}
+    \frac{\partial C}{\partial \omega_N} = \alpha && \frac{\partial C}{\partial \Theta_N} = \alpha
+\end{align*}
+
+We can rewrite \ref{fiscal_policy_effectivness} given the above and the following results depending on the response to shocks in fiscal policy:
+
+\begin{itemize}
+    \item Marginal tax rate is zero --- $t = 0$
+    \item The wage rate does not respond to fiscal policy shocks --- $dw = 0$
+    \item We are financing with lump sum taxes --- $dt = 0$
+\end{itemize}
+
+ $$
+ dY^* = \alpha \left[ (1 - 0 ) \cdot 0 - (1 - \alpha) \emptyset \right] +
+ \alpha \left[ (1 - \emptyset) \cdot \mu \frac{\partial Y^*}{\partial G} \cdot dG - dG  \right] + dG
+ $$
+ 
+One important mechanism is the effect of fiscal policy on profits
+ 
+ The only way you get a 1-to-1 fiscal policy multiplier you need $\mu = 1$
+
+ $$
+ dY^* = ( 1 - \alpha) dG + \alpha \mu \frac{\partial y^*}{\partial G} \cdot dG
+ $$
+ $$
+ ( 1- \alpha \mu) \frac{\partial Y}{\partial G} = ( 1 - \alpha ) \implies 
+ $$
+ 
+$$
+ \left. \frac{\partial Y^*}{\partial G} \right\rvert_{dT^*_0 = dG} = \frac{1 - \alpha}{1 - \alpha \mu} 
+$$
+ 
+\begin{equation}\tag{$m^*_A$}
+     \frac{\partial k_A^*}{\partial \mu} = \frac{\alpha (1 - \alpha)}{( 1 - \alpha )^2} > 0
+\end{equation}
+ 
+ 
+\subsection{Distortionary Taxation: \textcite{molana_note_1992}}
+This model is taken from \citetitle{molana_note_1992} by \textcite{molana_note_1992}
+
+
+$$
+T_0 = 0 \implies dT_0^* = 0
+$$
+
+$$
+t^*Y^* = G \implies t^* = \frac{G}{Y^*}
+$$
+
+$$
+\frac { \partial Y ^ { * } } { \partial G } = \frac{Y^* - \alpha(1-\mu)}{Y* \left[ 1 - \alpha (1 - t^*) \mu  \right]}
+$$
+
+
+$$
+Y^* = C^* \implies C^* = \alpha ( 1- t^*)(1 - \mu + \pi^*)
+$$
+
+Since we have zero profits and only lump sum taxes both  $t^* = 0 $ and $\pi^* = 0$ the above equation is simply:
+$$
+C^* = \alpha \left( 1 - \mu  \right)
+$$
+
+The conclusion is that fiscal policy is totally ineffective. 
+
+
+\subsection{Free Entry: \textcite{startz_monopolistic_1989}}
+This model is taken from \citetitle{startz_monopolistic_1989} by \textcite{startz_monopolistic_1989}
+
+$$
+n^* = \pi(n^*) = 0 \implies n^* = \frac{\mu Y^*}{(1 - \mu) \Phi}
+$$
+
+So the fiscal policy multiplier is:
+\begin{equation}\tag{$m^*_C$}
+ \left. k^*_c = \frac{\partial Y^*}{\partial G} \right\rvert_{dT^*_0 = dG, \frac{d\Pi^*}{dG} = 0 } = 1 - \alpha
+\end{equation}
+
+$$
+C = \frac{W + \Pi  - T}{1 + a^\epsilon \cdot w^{1 - \epsilon}}
+$$
+
+
+$$
+\mathcal{C}^*_{\Theta_L} = \frac{1}{1 + a^\epsilon \cdot w^{1 - \epsilon}}
+$$
+
+Where
+$$
+w^* = 1 - \mu
+$$
+
+The $\epsilon$ elasticity is important. The way for $\mu$ to affect the marginal propensity is if $\epsilon$ is different from one, if $\epsilon = 1$ we get a Cobb-Douglas. 
+
+$$
+\frac{\partial \mathcal{C}^*_{\Theta_L}}{\partial \mu}
+$$
+
+\subsection{Preferences: Dixon and Lawler}
+
+ - Startz assumptions + $U=u(C,Z)$
+
+
+Rewriting \ref{fiscal_policy_effectivness} gives:
+
+\begin{equation*}
+    dy^*=\mathcal{C}_{\omega N}^*\bigg[(1-t^*)\cdot 0-(1-\mu)\cdot 0\bigg] + \mathcal{C}_{\Theta N}^*\bigg[(1-0)\cdot 0-dG\bigg]+dG
+\end{equation*}
+
+
+So the fiscal policy multiplier is:
+\begin{equation}\tag{$m^*_D1$}
+    \left. k^*_{D1} = \frac{\partial Y^*}{\partial G} \right\rvert_{dT^*_0 = dG, \frac{d\Pi^*}{dG} = 0 } = 1 - \mathcal{C}_{\Theta N} \in [0,1]
+\end{equation}
+
+\begin{equation*}
+    \frac{\partial k^*_{D1}}{\partial \mu}=\frac{\partial \mathcal{C}_{\Theta N}}{\partial \mu}=-(\epsilon -1 )\frac{(1-\mu)^{-\epsilon}\cdot a^\epsilon}{\big[ 1+a^\epsilon+(1-\mu)^{1-\epsilon}\big]^2} 
+\end{equation*}
+
+\begin{align*}
+    u=\big(C^{\frac{\epsilon -1 }{\epsilon}}+aZ^{\frac{\epsilon-1}{\epsilon}}\big)^{\frac{\epsilon}{\epsilon -1}} && a>0 && \epsilon \geq 0
+\end{align*}
+
+\begin{align*}
+    C=\frac{w+\pi-T}{1+a^{\epsilon}w^{1-\epsilon}} && \mathcal{C}_{\Theta N}^*=\frac{1}{1+a^\epsilon w^{* 1-\epsilon}} && w^*=1-\mu
+\end{align*}
+
+There are three scenarios: 
+\begin{enumerate}
+    \item If $\epsilon=1$, and the utility function is a Cobb-Douglas, you'll get the Startz result; 
+    \item If $\epsilon>1 \implies \frac{\partial k^*_{D1}}{\partial \mu}<0$
+    \item If $\epsilon<1 \implies \frac{\partial k^*_{D1}}{\partial \mu}>0$ 
+\end{enumerate}
+
+\subsection{Effects on Wages}
+
+The income effect is always the same. 
+
+Elasticity of substitution ($\epsilon$) will make the substitution effect, either big ($\epsilon>1$) or small ($\epsilon<1$)
+\subsubsection{Lover for Variety}
+
+$$
+0 < \lambda \leq 1
+$$
+\subsubsection{ Devereux et \& al. (1996) - Increasing returns to specialization}
+$$
+y = \bigg[ n^{\frac{\lambda-1}{\sigma}} \int_0^n y(j)^\frac{\sigma-1}{\sigma}dj   \bigg]^\frac{\sigma}{\sigma - 1}
+$$
+
+With a positive $\lambda$:
+$$
+\Pi^* = 0 \implies n^*=\bigg[\frac{\mu y^*}{(1-\mu)\Phi}\bigg]^{\frac{1}{1+\frac{\lambda}{\sigma-1}}}
+$$
+
+$$
+w^*=n^{*\frac{\lambda}{\sigma-1}}(1-\mu)
+$$
+
+$$
+\frac{\partial w}{\partial G}=\frac{\lambda}{\lambda + \sigma -1}\frac{w^*}{y^*}\frac{\partial y^*}{\partial G}=\frac{\lambda}{\lambda+\sigma-1}\frac{1-(1-\alpha)\frac{G}{y^*}}{\alpha}\frac{\partial y^*}{\partial G}
+$$
+
+\begin{equation}\tag{$m^*_e1$}
+k^*_{e1}=\frac{\partial y^*}{\partial G}\bigg\rvert_{dT^*_0=dG,G=0,\frac{d \pi^*}{\d G=0}}=(1-\alpha)\bigg(+\frac{\lambda n}{1-\mu} \bigg)
+\end{equation}
+
+
+$$
+\frac{\partial k^*_{e1}}{\partial \mu}=(1-\alpha)\frac{\lambda}{(1+\mu)^2}>0
+$$
+
+Which is positive. 
+
+$$
+y^*=w^*L^*+\pi^*=(1-\mu)n^{*\frac{\lambda}{\sigma-1}}L^*
+$$
+
+
+\subsubsection{Endogenous Markups: \cite{costa_endogenous_2004}}
+This model is taken from \citetitle{costa_endogenous_2004} by \textcite{costa_endogenous_2004}
+
+
+\begin{enumerate}
+    \item $ \lambda = 0$
+    \item $n = \overline{n}$
+    \item $m \leq 1$ 
+\end{enumerate}
+
+
+$$
+\pi^* = \mu^*Y^* - \overline{n}m^* \cdot w^*  \cdot \Phi^*
+$$
+
+
+$$
+w^*= 1 - \mu*
+$$
+
+$$
+m = \frac{1}{\sigma \cdot \mu^*}
+$$
+
+$$
+\Pi = 0 \implies \mu^* = \frac{\phi^*}{1 + \phi^*}
+$$
+
+Where $\phi$ is an increasing returns to scale indicator:
+
+$$
+\phi^* = \frac{\overline{n} \Phi m^*}{Y^*}
+$$
+
+$$
+\Pi = 0 \implies \sigma \mu^{*^2} \cdot Y^* + n \Phi\mu^* - \overline{n}\Phi = 0
+$$
+
+$$
+2\sigma\mu^* + \sigma\mu^{*2}dY^*+n\Phi d\mu^*=0
+$$
+
+$$
+\frac{d\mu^*}{dY^*}=\frac{\sigma\mu^{*2}}{2\sigma\mu^*Y^*+\overline{n}\Phi}<0
+$$
+
+$$
+-\frac{\sigma\mu^{*3}}{n\Phi(2-\mu^*)}
+$$
+
+
+$$
+y^*=\frac{\overline{n}\Phi(1-\mu^*)}{\sigma\mu^*}
+$$
+
+
+\begin{equation}\tag{$m^*_e2$}
+k_{e2}=\frac{\partial y^*}{\partial G}\bigg\rvert_{dt_{0}=dG, \frac{d \pi^*}{dG}=0}=\frac{1-\alpha}{1-\frac{\sigma\mu^{*3}}{\overline{n}\Phi(2-\mu^*)}}
+\end{equation}
+
+
+
+
+
